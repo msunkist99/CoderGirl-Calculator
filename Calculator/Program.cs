@@ -16,42 +16,33 @@ namespace Calculator
             Console.WriteLine("enter your SECOND number - ");
             double secondNumber = double.Parse(Console.ReadLine());
 
-            Console.WriteLine("1 - add " + firstNumber + " and " + secondNumber);
-            Console.WriteLine("2 - subtract " + firstNumber + " from " + secondNumber);
-            Console.WriteLine("3 - subtract " + secondNumber + " from " + firstNumber);
-            Console.WriteLine("4 - multiply " + firstNumber + " and " + secondNumber);
-            Console.WriteLine("5 - divide " + firstNumber + " by " + secondNumber);
-            Console.WriteLine("6 - divide " + secondNumber + " by " + firstNumber);
+            Console.WriteLine("add " + firstNumber + " and " + secondNumber);
+            Console.WriteLine("subtract " + secondNumber + " from " + firstNumber);
+            Console.WriteLine("multiply " + firstNumber + " and " + secondNumber);
+            Console.WriteLine("divide " + secondNumber + " by " + firstNumber);
             Console.WriteLine("enter your option for the numbers - ");
 
-            int option = int.Parse(Console.ReadLine());
+            string option = Console.ReadLine();
 
-            if (option == 1)
+            if (option == "add")
             {
                 result = firstNumber + secondNumber;
             }
-            else if (option == 2)
-            {
-                result = secondNumber - firstNumber;
-            }
-            else if (option == 3)
+            else if (option == "subtract")
             {
                 result = firstNumber - secondNumber;
             }
-            else if (option == 4)
+
+            else if (option == "multiply")
             {
                 result = firstNumber * secondNumber;
             }
-            else if (option == 5)
+            else if (option == "divide")
             {
                 result = firstNumber / secondNumber;
             }
-            else if (option == 6)
-            {
-                result = secondNumber / firstNumber;
-            }
 
-            Console.WriteLine($"Total = {result:0.00}");
+            Console.WriteLine(result);
 
             Console.ReadLine();
         }
